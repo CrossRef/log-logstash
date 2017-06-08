@@ -1,3 +1,5 @@
 FROM docker.elastic.co/logstash/logstash:5.4.0
 
-ADD pipeline/ /usr/share/logstash/pipeline/
+RUN rm -rf /usr/share/logstash/pipline
+
+COPY pipeline /usr/share/logstash/pipeline
